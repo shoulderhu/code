@@ -19,3 +19,4 @@ sudo apt update
 sudo apt-get install terraform
 
 terraform -install-autocomplete
+complete -C /usr/bin/terraform terraform

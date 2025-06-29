@@ -20,3 +20,5 @@ tasks:
         terraform -install-autocomplete
         complete -C $(which terraform) terraform
         terraform -version
+      env:
+        TF_VAR_environment: STAGE

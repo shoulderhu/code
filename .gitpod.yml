@@ -9,8 +9,8 @@ tasks:
         aws sts get-caller-identity
       env:
         # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html 
-        AWS_CLI_AUTO_PROMPT: on-partial        
-        AWS_DEFAULT_REGION: ap-northeast-1
+        AWS_CLI_AUTO_PROMPT: on-partial
+        AWS_REGION: ap-northeast-1
 
     - name: Terraform
       before: |

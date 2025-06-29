@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e 
+set -e
 
 sudo apt-get update
 sudo apt-get install -y gnupg software-properties-common
@@ -17,4 +17,3 @@ sudo tee /etc/apt/sources.list.d/hashicorp.list
 
 sudo apt update
 sudo apt-get install terraform
-

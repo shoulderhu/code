@@ -1,3 +1,13 @@
 tasks:
     - name: AWS CLI
-      before: bash $GITPOD_REPO_ROOT/gitpod/aws_cli.sh
+      before: |
+        # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+        # https://github.com/gitpod-samples/demo-aws-with-gitpod
+        bash $GITPOD_REPO_ROOT/gitpod/aws_cli.sh
+      env:
+        AWS_CLI_AUTO_PROMPT: on-partial
+
+    - name: Terraform
+      before: |
+        # https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+        bash $GITPOD_REPO_ROOT/gitpod/terraform.sh

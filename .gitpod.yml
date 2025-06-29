@@ -1,15 +1,20 @@
 tasks:
     - name: AWS CLI
-      before: |
+      init: |
         # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
         # https://github.com/gitpod-samples/demo-aws-with-gitpod
         bash $GITPOD_REPO_ROOT/.gitpod/aws_cli.sh
+      command: |
+        aws --version
+        aws sts get-caller-identity
       env:
         # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html 
         AWS_CLI_AUTO_PROMPT: on-partial        
         AWS_DEFAULT_REGION: ap-northeast-1
 
     - name: Terraform
-      before: |
+      init: |
         # https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
         bash $GITPOD_REPO_ROOT/.gitpod/terraform.sh
+      command: |
+        terraform -version

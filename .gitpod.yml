@@ -17,4 +17,6 @@ tasks:
         # https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
         bash $GITPOD_REPO_ROOT/.gitpod/terraform.sh
       command: |
+        terraform -install-autocomplete
+        complete -C $(which terraform) terraform
         terraform -version

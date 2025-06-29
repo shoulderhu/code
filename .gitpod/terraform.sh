@@ -18,5 +18,3 @@ sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update
 sudo apt-get install terraform
 
-terraform -install-autocomplete
-complete -C /usr/bin/terraform terraform

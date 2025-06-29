@@ -14,3 +14,5 @@ rm awscliv2.zip
 
 cd "${OLD_DIR}" || exit 1
 rm -rf "${TMP_DIR}"
+
+aws --version

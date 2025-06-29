@@ -5,7 +5,9 @@ tasks:
         # https://github.com/gitpod-samples/demo-aws-with-gitpod
         bash $GITPOD_REPO_ROOT/gitpod/aws_cli.sh
       env:
-        AWS_CLI_AUTO_PROMPT: on-partial
+        # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html 
+        AWS_CLI_AUTO_PROMPT: on-partial        
+        AWS_DEFAULT_REGION: ap-northeast-1
 
     - name: Terraform
       before: |

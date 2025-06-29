@@ -1,0 +1,3 @@
+tasks:
+    - name: AWS CLI
+      before: bash $GITPOD_REPO_ROOT/gitpod/aws_cli.sh
